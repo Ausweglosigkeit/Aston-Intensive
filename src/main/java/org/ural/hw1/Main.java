@@ -34,6 +34,7 @@ public class Main {
             field.set(person, 4242);
             //вывод в консоль значения поля age
             System.out.println(field.getInt(person));
+            field.setAccessible(false);
         } catch (NoSuchFieldException | IllegalAccessException e) {
             throw new RuntimeException(e);
         }
